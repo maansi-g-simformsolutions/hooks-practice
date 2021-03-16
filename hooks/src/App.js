@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import './App.css';
-
+import React, { useState } from "react";
+import "./App.css";
 
 /*
 const App = () => {
@@ -63,39 +62,52 @@ const App = () => {
 }
 */
 
-
-
 const App = () => {
   const state = useState();
-  let background1 = 'https://images.pexels.com/photos/4041278/pexels-photo-4041278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
-const [cbg, setBg] = useState(background1);
+  let background1 =
+    "https://images.pexels.com/photos/4041278/pexels-photo-4041278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+  const [cbg, setBg] = useState(background1);
 
+  const [ctext, setText] = useState("#ff6b81");
 
-const[ctext, setText] = useState("#ff6b81")
+  const colourChange = () => {
+    let newbg = "./img/flower2.jpg";
+    setBg(newbg);
+    let newtext = "black";
+    setText(newtext);
+  };
 
-const colourChange = () => {
-  
-  let newbg = './img/flower2.jpg';
-  setBg(newbg);
-  let newtext = 'black';
-  setText(newtext);
-}
+  const colourChange2 = () => {
+    let background1 =
+      "https://images.pexels.com/photos/4041278/pexels-photo-4041278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+    setBg(background1);
+  };
 
-const colourChange2 = () => {
-  let background1 = 'https://images.pexels.com/photos/4041278/pexels-photo-4041278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
-  setBg(background1);
-}
-
-  return(
-    <div className='app' style={{backgroundImage : `url(${cbg})`, color: ctext}}>
-      <div className='sub-app'>
-    <div className='btns'>
-    <button className='click' onClick={colourChange} style={{color: ctext}}>Change My Colour</button>
-    <button className='click1' onClick={colourChange2} style={{color: ctext}}>Change My Colour Back !</button>
+  return (
+    <div
+      className="app"
+      style={{ backgroundImage: `url(${cbg})`, color: ctext }}
+    >
+      <div className="sub-app">
+        <div className="btns">
+          <button
+            className="click"
+            onClick={colourChange}
+            style={{ color: ctext }}
+          >
+            Change My Colour
+          </button>
+          <button
+            className="click1"
+            onClick={colourChange2}
+            style={{ color: ctext }}
+          >
+            Change My Colour Back !
+          </button>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
 export default App;
