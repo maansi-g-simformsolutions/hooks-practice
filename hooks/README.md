@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is a practice for Hooks
+This project is a practice of react Hooks
 
 ## Available Scripts
 
